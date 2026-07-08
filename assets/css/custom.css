@@ -177,6 +177,10 @@ body.alex-site {
 .alex-site #footer p {
 	font-style: normal !important;
 	line-height: 1.7;
+	text-align: left !important;
+	word-spacing: normal !important;
+	letter-spacing: normal;
+	hyphens: none;
 }
 
 .recruiter-summary {
@@ -231,6 +235,8 @@ body.alex-site {
 	font-size: 0.95rem;
 	line-height: 1.55;
 	color: var(--alex-muted);
+	text-align: left !important;
+	word-spacing: normal !important;
 }
 
 .metric-grid {
@@ -251,18 +257,25 @@ body.alex-site {
 	line-height: 1;
 	color: var(--alex-blue);
 	margin-bottom: 0.7rem;
+	text-align: center !important;
 }
 
 .metric-grid h3 {
 	font-size: 0.95rem;
 	margin-bottom: 0.55rem;
 	font-weight: 760;
+	text-align: center !important;
 }
 
 .metric-grid p {
-	font-size: 0.88rem;
+	font-size: 0.92rem;
 	line-height: 1.55;
-	margin-bottom: 0;
+	margin: 0 auto;
+	max-width: 28ch;
+	text-align: left !important;
+	word-spacing: normal !important;
+	letter-spacing: normal !important;
+	hyphens: none;
 }
 
 .skill-strip {
@@ -276,6 +289,7 @@ body.alex-site {
 .cta-panel h2 {
 	color: #fff;
 	margin-bottom: 1rem;
+	text-align: center !important;
 }
 
 .skill-strip .chips {
@@ -333,6 +347,7 @@ body.alex-site {
 	max-width: 780px;
 	margin: 0 auto 1.5rem auto;
 	color: #e0f2fe;
+	text-align: center !important;
 }
 
 .case-study-content > h2 {
@@ -456,6 +471,10 @@ body.alex-site {
 	.case-hero-panel {
 		grid-template-columns: 1fr 1fr;
 	}
+
+	.metric-grid p {
+		max-width: 34ch;
+	}
 }
 
 @media screen and (max-width: 736px) {
@@ -489,6 +508,11 @@ body.alex-site {
 
 	.metric-number {
 		font-size: 2rem;
+	}
+
+	.metric-grid p {
+		max-width: 38ch;
+		text-align: left !important;
 	}
 
 	.skill-strip,
