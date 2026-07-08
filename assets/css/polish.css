@@ -149,7 +149,7 @@
 }
 
 .compact-case-header {
-	margin-bottom: 2rem !important;
+	margin-bottom: 2.25rem !important;
 }
 
 .compact-case-header h1 {
@@ -159,6 +159,7 @@
 .case-hero-panel {
 	border: 0 !important;
 	box-shadow: 0 22px 70px rgba(15, 23, 42, 0.15) !important;
+	margin-bottom: 3rem !important;
 }
 
 .account-proof-section,
@@ -190,19 +191,25 @@
 }
 
 .account-proof-grid,
-.signal-grid {
+.signal-grid,
+.case-steps {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1rem;
+	gap: 1.25rem;
 }
 
 .account-proof-grid article,
-.signal-grid article {
+.signal-grid article,
+.case-steps article {
 	border: 1px solid var(--alex-border);
 	border-radius: 1.1rem;
-	background: linear-gradient(180deg, #ffffff, #f8fafc);
 	box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
 	padding: 1.35rem;
+}
+
+.account-proof-grid article,
+.case-steps article {
+	background: linear-gradient(180deg, #ffffff, #f8fafc);
 }
 
 .account-proof-grid h3 {
@@ -210,9 +217,15 @@
 	margin-bottom: 0.65rem;
 }
 
+.account-proof-grid p,
+.case-steps p,
+.signal-grid span {
+	font-size: 0.95rem;
+	line-height: 1.58;
+}
+
 .account-proof-grid p {
 	margin-bottom: 1rem;
-	font-size: 0.95rem;
 }
 
 .account-proof-grid article > span {
@@ -236,9 +249,11 @@
 
 .signal-grid span {
 	display: block;
-	font-size: 0.95rem;
-	line-height: 1.55;
 	color: var(--alex-muted);
+}
+
+.case-steps {
+	margin: 3rem 0;
 }
 
 .case-steps article {
@@ -247,6 +262,7 @@
 
 .result-panel {
 	background: linear-gradient(135deg, #f8fafc, #eff6ff) !important;
+	margin: 3rem 0 2rem 0 !important;
 }
 
 .result-panel h2 {
@@ -290,7 +306,8 @@
 	}
 
 	.account-proof-grid,
-	.signal-grid {
+	.signal-grid,
+	.case-steps {
 		grid-template-columns: 1fr;
 	}
 
