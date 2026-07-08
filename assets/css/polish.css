@@ -5,18 +5,101 @@
 	overflow: hidden;
 }
 
-.alex-site #nav {
-	backdrop-filter: blur(14px);
-	-webkit-backdrop-filter: blur(14px);
+.alex-site #header {
+	display: none !important;
 }
 
-.alex-site #nav .links li a,
-.alex-site #header .logo {
-	letter-spacing: 0.02em;
+.alex-site #nav {
+	width: min(92vw, 1120px) !important;
+	height: 66px !important;
+	margin: -5.5rem auto 2.25rem auto !important;
+	padding: 0.45rem !important;
+	border-radius: 999px !important;
+	background: rgba(17, 24, 39, 0.72) !important;
+	border: 1px solid rgba(255, 255, 255, 0.16) !important;
+	box-shadow: 0 24px 70px rgba(15, 23, 42, 0.26) !important;
+	backdrop-filter: blur(18px) saturate(140%);
+	-webkit-backdrop-filter: blur(18px) saturate(140%);
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	position: relative !important;
+	z-index: 20 !important;
+}
+
+.alex-site #nav .links {
+	display: flex !important;
+	align-items: center !important;
+	gap: 0.35rem !important;
+	height: auto !important;
+}
+
+.alex-site #nav .links li {
+	display: block !important;
+	height: auto !important;
+	line-height: normal !important;
+}
+
+.alex-site #nav .links li a {
+	height: auto !important;
+	line-height: 1 !important;
+	padding: 0.9rem 1.15rem !important;
+	border-radius: 999px !important;
+	font-size: 0.84rem !important;
+	font-weight: 760 !important;
+	letter-spacing: 0.01em !important;
+	text-transform: none !important;
+	color: rgba(255, 255, 255, 0.82) !important;
+	transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.alex-site #nav .links li a:hover {
+	background: rgba(255, 255, 255, 0.10) !important;
+	color: #ffffff !important;
+	transform: translateY(-1px);
+}
+
+.alex-site #nav .links li.active a {
+	background: #ffffff !important;
+	color: #111827 !important;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.20) !important;
+}
+
+.alex-site #nav .icons {
+	display: flex !important;
+	align-items: center !important;
+	gap: 0.45rem !important;
+	height: auto !important;
+	padding-right: 0.25rem !important;
+}
+
+.alex-site #nav .icons li,
+.alex-site #nav .icons li a {
+	height: auto !important;
+	line-height: 1 !important;
+}
+
+.alex-site #nav .icons li a {
+	width: 2.35rem !important;
+	height: 2.35rem !important;
+	border-radius: 999px !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	color: rgba(255, 255, 255, 0.86) !important;
+	background: rgba(255, 255, 255, 0.08) !important;
+	transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.alex-site #nav .icons li a:hover {
+	background: #ffffff !important;
+	color: #111827 !important;
+	transform: translateY(-1px);
 }
 
 .alex-site #intro.alex-hero {
 	background: radial-gradient(circle at top center, rgba(37, 99, 235, 0.22), transparent 34%), linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72));
+	padding-bottom: 8rem !important;
 }
 
 .alex-hero h1,
@@ -270,6 +353,11 @@
 }
 
 @media screen and (max-width: 980px) {
+	.alex-site #nav {
+		width: min(94vw, 760px) !important;
+		margin-top: -5rem !important;
+	}
+
 	.project-grid article header {
 		min-height: auto;
 	}
@@ -286,6 +374,45 @@
 @media screen and (max-width: 736px) {
 	.alex-site #main {
 		border-radius: 18px 18px 0 0;
+	}
+
+	.alex-site #intro.alex-hero {
+		padding-bottom: 7.25rem !important;
+	}
+
+	.alex-site #nav {
+		width: calc(100% - 1.5rem) !important;
+		height: auto !important;
+		margin: -4.6rem auto 1.5rem auto !important;
+		border-radius: 24px !important;
+		padding: 0.55rem !important;
+		align-items: stretch !important;
+		gap: 0.45rem !important;
+	}
+
+	.alex-site #nav .links {
+		flex: 1 1 auto !important;
+		gap: 0.35rem !important;
+	}
+
+	.alex-site #nav .links li {
+		flex: 1 1 0 !important;
+	}
+
+	.alex-site #nav .links li a {
+		width: 100% !important;
+		text-align: center !important;
+		padding: 0.85rem 0.6rem !important;
+		font-size: 0.78rem !important;
+	}
+
+	.alex-site #nav .icons {
+		gap: 0.25rem !important;
+	}
+
+	.alex-site #nav .icons li a {
+		width: 2.15rem !important;
+		height: 2.15rem !important;
 	}
 
 	.compact-heading {
