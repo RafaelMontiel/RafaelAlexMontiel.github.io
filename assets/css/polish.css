@@ -1,0 +1,215 @@
+/* Final UX polish layer: Apple / Google / Notion-inspired refinements */
+
+.alex-site #main {
+	border-radius: 28px 28px 0 0;
+	overflow: hidden;
+}
+
+.alex-site #nav {
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+}
+
+.alex-site #nav .links li a,
+.alex-site #header .logo {
+	letter-spacing: 0.02em;
+}
+
+.alex-site #intro.alex-hero {
+	background: radial-gradient(circle at top center, rgba(37, 99, 235, 0.22), transparent 34%), linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72));
+}
+
+.alex-hero h1,
+.alex-hero h2 {
+	text-wrap: balance;
+}
+
+.hero-copy,
+.hero-subtitle {
+	text-wrap: balance;
+}
+
+.compact-heading {
+	padding-top: 0.5rem !important;
+	margin-bottom: 1.5rem !important;
+}
+
+.compact-heading h2,
+.compact-case-header h1 {
+	text-wrap: balance;
+}
+
+.metric-grid {
+	gap: 1.25rem;
+}
+
+.metric-grid article {
+	min-height: 260px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.metric-grid p {
+	max-width: 30ch;
+}
+
+.skill-strip {
+	background: linear-gradient(135deg, #111827, #1d4ed8 55%, #0f766e);
+	border: 0 !important;
+}
+
+.skill-strip .chips span {
+	background: rgba(255, 255, 255, 0.12);
+	border-color: rgba(255, 255, 255, 0.22);
+}
+
+.project-grid article {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100%;
+}
+
+.project-grid article header {
+	min-height: 132px;
+}
+
+.project-grid article .image.fit {
+	margin: 0 0 1.55rem 0;
+	border-radius: 18px;
+	overflow: hidden;
+	background: #f8fafc;
+	box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+}
+
+.project-grid article .image.fit img {
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
+	display: block;
+}
+
+.case-feature .image.fit img {
+	object-fit: cover;
+}
+
+.project-grid article p {
+	font-size: 0.98rem;
+	max-width: 52ch;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.project-grid article .actions {
+	margin-top: auto;
+}
+
+.project-label,
+.alex-site .date {
+	font-weight: 800 !important;
+	letter-spacing: 0.12em !important;
+}
+
+.final-cta {
+	border: 0 !important;
+	box-shadow: 0 22px 70px rgba(15, 23, 42, 0.16) !important;
+}
+
+.final-cta h2 {
+	text-wrap: balance;
+}
+
+.compact-footer {
+	background: rgba(248, 250, 252, 0.96) !important;
+}
+
+.compact-footer > section:first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.compact-footer h2 {
+	font-size: 1.25rem;
+	margin-bottom: 0.45rem;
+}
+
+.compact-footer p {
+	font-size: 0.95rem;
+	margin-bottom: 0;
+}
+
+.case-page .case-hero-intro .hero-copy {
+	max-width: 760px;
+}
+
+.case-study-content {
+	padding-top: 4rem !important;
+}
+
+.compact-case-header {
+	margin-bottom: 2rem !important;
+}
+
+.compact-case-header h1 {
+	font-size: clamp(2.65rem, 5.6vw, 5.4rem) !important;
+}
+
+.case-hero-panel {
+	border: 0 !important;
+	box-shadow: 0 22px 70px rgba(15, 23, 42, 0.15) !important;
+}
+
+.case-steps article {
+	min-height: 220px;
+}
+
+.result-panel {
+	background: linear-gradient(135deg, #f8fafc, #eff6ff) !important;
+}
+
+.result-panel h2 {
+	margin-bottom: 0.75rem;
+}
+
+@media screen and (max-width: 980px) {
+	.project-grid article header {
+		min-height: auto;
+	}
+
+	.project-grid article .image.fit img {
+		height: 220px;
+	}
+
+	.metric-grid article {
+		min-height: 230px;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.alex-site #main {
+		border-radius: 18px 18px 0 0;
+	}
+
+	.compact-heading {
+		padding-top: 0 !important;
+	}
+
+	.metric-grid article,
+	.case-steps article {
+		min-height: auto;
+	}
+
+	.project-grid article .image.fit img {
+		height: 200px;
+	}
+
+	.project-grid article p {
+		max-width: none;
+	}
+
+	.compact-footer > section:first-child {
+		display: block;
+	}
+}
