@@ -121,8 +121,79 @@
 }
 
 .alex-site #intro.alex-hero {
-	padding-top: 7.25rem !important;
-	padding-bottom: 5rem !important;
+	padding-top: 6.6rem !important;
+	padding-bottom: 4.4rem !important;
+	min-height: 92vh !important;
+}
+
+.alex-site .alex-hero .eyebrow {
+	font-size: clamp(0.72rem, 1.45vw, 1rem) !important;
+	letter-spacing: 0.16em !important;
+	margin-bottom: 0.8rem !important;
+}
+
+.alex-site .alex-hero h1 {
+	font-size: clamp(3rem, 6.4vw, 5.7rem) !important;
+	line-height: 0.98 !important;
+	letter-spacing: -0.065em !important;
+	margin-bottom: 0.45rem !important;
+}
+
+.alex-site .alex-hero h2 {
+	font-size: clamp(1.85rem, 4.25vw, 4.1rem) !important;
+	line-height: 1.02 !important;
+	letter-spacing: -0.06em !important;
+	margin-bottom: 1rem !important;
+}
+
+.alex-site .hero-subtitle {
+	max-width: 780px !important;
+	font-size: clamp(0.98rem, 1.35vw, 1.16rem) !important;
+	line-height: 1.45 !important;
+	font-weight: 650 !important;
+	margin-bottom: 1.1rem !important;
+}
+
+.alex-site .hero-copy {
+	max-width: 770px !important;
+	font-size: clamp(1rem, 1.35vw, 1.14rem) !important;
+	line-height: 1.65 !important;
+	margin-bottom: 1.35rem !important;
+}
+
+.alex-site .hero-proof {
+	gap: 0.55rem !important;
+	margin: 1rem auto 1.35rem auto !important;
+}
+
+.alex-site .hero-proof span {
+	padding: 0.52rem 0.86rem !important;
+	font-size: 0.82rem !important;
+	font-weight: 720 !important;
+	background: rgba(255, 255, 255, 0.08) !important;
+	border-color: rgba(147, 197, 253, 0.26) !important;
+}
+
+.alex-site .hero-actions {
+	gap: 0.6rem !important;
+}
+
+.alex-site .hero-actions .button {
+	padding: 0 1.35rem !important;
+	height: 3rem !important;
+	line-height: 3rem !important;
+	font-size: 0.9rem !important;
+	min-width: 10.5rem;
+}
+
+.alex-site .scroll-action {
+	margin-top: 1rem !important;
+}
+
+.alex-site .scroll-action .button {
+	width: 3.35rem !important;
+	height: 3.35rem !important;
+	line-height: 3.35rem !important;
 }
 
 .alex-site #main {
@@ -321,8 +392,22 @@
 	}
 
 	.alex-site #intro.alex-hero {
-		padding-top: 6.25rem !important;
-		padding-bottom: 3.5rem !important;
+		padding-top: 6.15rem !important;
+		padding-bottom: 3rem !important;
+		min-height: auto !important;
+	}
+
+	.alex-site .alex-hero h1 {
+		font-size: clamp(2.65rem, 12vw, 4.2rem) !important;
+	}
+
+	.alex-site .alex-hero h2 {
+		font-size: clamp(1.6rem, 8vw, 2.45rem) !important;
+	}
+
+	.alex-site .hero-actions .button {
+		width: 100% !important;
+		min-width: 0;
 	}
 
 	.csm-system-grid,
