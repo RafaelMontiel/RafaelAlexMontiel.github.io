@@ -1,0 +1,206 @@
+/* Product-style navigation and CSM portfolio story layer */
+
+.alex-site #header {
+	display: none !important;
+}
+
+.alex-site #nav {
+	position: fixed !important;
+	top: 1rem !important;
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	z-index: 9999 !important;
+	width: min(92vw, 980px) !important;
+	height: 3.35rem !important;
+	margin: 0 !important;
+	padding: 0.35rem !important;
+	border-radius: 999px !important;
+	background: rgba(10, 16, 28, 0.58) !important;
+	border: 1px solid rgba(255, 255, 255, 0.10) !important;
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18) !important;
+	backdrop-filter: blur(24px) saturate(160%) !important;
+	-webkit-backdrop-filter: blur(24px) saturate(160%) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+}
+
+.alex-site #nav:before,
+.alex-site #nav:after {
+	display: none !important;
+}
+
+.alex-site #nav .links,
+.alex-site #nav .icons {
+	display: flex !important;
+	align-items: center !important;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	gap: 0.25rem !important;
+}
+
+.alex-site #nav .links li,
+.alex-site #nav .icons li {
+	height: auto !important;
+	line-height: 1 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.alex-site #nav .links li a {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	height: 2.45rem !important;
+	line-height: 1 !important;
+	padding: 0 1rem !important;
+	border-radius: 999px !important;
+	font-size: 0.84rem !important;
+	font-weight: 720 !important;
+	letter-spacing: -0.01em !important;
+	text-transform: none !important;
+	background: transparent !important;
+	color: rgba(255, 255, 255, 0.76) !important;
+	box-shadow: none !important;
+	border: 0 !important;
+	transition: 180ms ease !important;
+}
+
+.alex-site #nav .links li a:hover {
+	background: rgba(255, 255, 255, 0.10) !important;
+	color: #ffffff !important;
+}
+
+.alex-site #nav .links li.active a {
+	background: rgba(255, 255, 255, 0.95) !important;
+	color: #111827 !important;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14) !important;
+}
+
+.alex-site #nav .icons {
+	gap: 0.35rem !important;
+}
+
+.alex-site #nav .icons li a {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 2.25rem !important;
+	height: 2.25rem !important;
+	line-height: 1 !important;
+	border-radius: 999px !important;
+	background: rgba(255, 255, 255, 0.08) !important;
+	color: rgba(255, 255, 255, 0.82) !important;
+	transition: 180ms ease !important;
+}
+
+.alex-site #nav .icons li a:hover {
+	background: rgba(255, 255, 255, 0.95) !important;
+	color: #111827 !important;
+}
+
+.alex-site #intro.alex-hero {
+	padding-top: 7.25rem !important;
+	padding-bottom: 5rem !important;
+}
+
+.alex-site #main {
+	margin-top: 0 !important;
+	border-radius: 28px 28px 0 0 !important;
+}
+
+.csm-system-section {
+	margin: 3rem 0;
+}
+
+.csm-system-section .section-heading p {
+	max-width: 860px;
+}
+
+.csm-system-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.csm-system-grid article {
+	border: 1px solid var(--alex-border);
+	border-radius: 1.2rem;
+	background: linear-gradient(180deg, #ffffff, #f8fafc);
+	box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
+	padding: 1.25rem;
+	text-align: left;
+}
+
+.csm-system-grid article > span {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: 999px;
+	background: #eff6ff;
+	color: var(--alex-blue);
+	font-size: 0.8rem;
+	font-weight: 800;
+	margin-bottom: 1rem;
+}
+
+.csm-system-grid h3 {
+	font-size: 1rem;
+	line-height: 1.25;
+	margin-bottom: 0.65rem;
+}
+
+.csm-system-grid p {
+	font-size: 0.92rem;
+	line-height: 1.55;
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 980px) {
+	.csm-system-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.alex-site #nav {
+		top: 0.65rem !important;
+		width: calc(100% - 1rem) !important;
+		height: auto !important;
+		border-radius: 1.4rem !important;
+		padding: 0.4rem !important;
+		gap: 0.35rem !important;
+	}
+
+	.alex-site #nav .links {
+		flex: 1 1 auto !important;
+	}
+
+	.alex-site #nav .links li {
+		flex: 1 1 0 !important;
+	}
+
+	.alex-site #nav .links li a {
+		width: 100% !important;
+		height: 2.25rem !important;
+		padding: 0 0.45rem !important;
+		font-size: 0.76rem !important;
+	}
+
+	.alex-site #nav .icons li a {
+		width: 2rem !important;
+		height: 2rem !important;
+	}
+
+	.alex-site #intro.alex-hero {
+		padding-top: 6.25rem !important;
+		padding-bottom: 3.5rem !important;
+	}
+
+	.csm-system-grid {
+		grid-template-columns: 1fr;
+	}
+}
