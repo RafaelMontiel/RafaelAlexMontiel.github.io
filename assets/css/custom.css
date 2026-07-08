@@ -1,5 +1,5 @@
 :root {
-	--alex-ink: #1f2937;
+	--alex-ink: #111827;
 	--alex-muted: #667085;
 	--alex-blue: #2563eb;
 	--alex-blue-dark: #1d4ed8;
@@ -8,52 +8,108 @@
 	--alex-card: #ffffff;
 	--alex-border: #e5e7eb;
 	--alex-gold: #f59e0b;
+	--alex-font: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body.alex-site,
+.alex-site input,
+.alex-site select,
+.alex-site textarea,
+.alex-site button,
+.alex-site .button,
+.alex-site #nav,
+.alex-site #header,
+.alex-site #footer,
+.alex-site p,
+.alex-site span,
+.alex-site li,
+.alex-site a,
+.alex-site strong,
+.alex-site h1,
+.alex-site h2,
+.alex-site h3,
+.alex-site h4,
+.alex-site h5,
+.alex-site h6 {
+	font-family: var(--alex-font) !important;
 }
 
 body.alex-site {
 	background-color: #0f172a;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 .alex-site #wrapper:before {
-	background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.45));
+	background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 64, 175, 0.38));
 }
 
 .alex-site #intro.alex-hero {
-	padding-top: 7rem;
-	max-width: 980px;
+	min-height: 100vh;
+	padding: 8rem 2rem 5rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	max-width: none;
+}
+
+.hero-inner {
+	width: min(100%, 1080px);
+	margin: 0 auto;
 }
 
 .alex-hero .eyebrow,
 .project-label,
 .case-label {
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
-	font-size: 0.8rem;
-	font-weight: 800;
-	letter-spacing: 0.16em;
+	font-size: 0.78rem;
+	font-weight: 750;
+	letter-spacing: 0.12em;
 	text-transform: uppercase;
 	color: #93c5fd;
-	margin-bottom: 0.75rem;
+	margin-bottom: 1rem;
 	display: inline-block;
 }
 
 .alex-hero h1 {
-	letter-spacing: 0.035em;
+	font-size: clamp(3.15rem, 8vw, 6.25rem);
+	font-weight: 780;
+	letter-spacing: -0.065em;
+	line-height: 0.95;
+	margin: 0 0 0.7rem 0;
+	text-shadow: 0 18px 45px rgba(0,0,0,0.32);
+	text-transform: none;
+}
+
+.alex-hero h2 {
+	font-size: clamp(1.65rem, 4.5vw, 3.65rem);
+	font-weight: 680;
+	letter-spacing: -0.045em;
 	line-height: 1.02;
-	margin-bottom: 1rem;
-	text-shadow: 0 10px 35px rgba(0,0,0,0.35);
+	margin: 0 0 1.35rem 0;
+	text-transform: none;
+	color: #f8fafc;
 }
 
 .hero-subtitle {
-	font-weight: 700;
-	letter-spacing: 0.02em;
-	margin-bottom: 0.8rem !important;
+	font-weight: 600;
+	font-style: normal !important;
+	letter-spacing: -0.015em;
+	margin: 0 auto 0.95rem auto !important;
 	color: #dbeafe;
+	max-width: 920px;
+	font-size: clamp(1rem, 1.55vw, 1.25rem);
+	line-height: 1.55;
 }
 
 .hero-copy {
-	max-width: 800px;
-	margin: 0 auto 1.5rem auto !important;
-	font-size: 1.05rem;
+	max-width: 780px;
+	margin: 0 auto 1.65rem auto !important;
+	font-size: clamp(1rem, 1.5vw, 1.18rem);
+	font-style: normal !important;
+	line-height: 1.75;
+	color: rgba(255,255,255,0.88);
 }
 
 .hero-proof,
@@ -67,18 +123,32 @@ body.alex-site {
 
 .hero-proof span,
 .chips span {
-	border: 1px solid rgba(147, 197, 253, 0.35);
-	background: rgba(255,255,255,0.11);
+	border: 1px solid rgba(147, 197, 253, 0.32);
+	background: rgba(255,255,255,0.10);
 	color: #ffffff;
 	border-radius: 999px;
-	padding: 0.5rem 0.9rem;
-	font-size: 0.82rem;
-	font-weight: 800;
-	letter-spacing: 0.03em;
+	padding: 0.55rem 0.95rem;
+	font-size: 0.84rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
 }
 
 .hero-actions {
-	margin-bottom: 1.4rem !important;
+	margin-bottom: 0 !important;
+	gap: 0.75rem;
+	justify-content: center;
+}
+
+.scroll-action {
+	margin-top: 1.5rem !important;
+}
+
+.alex-site .button,
+.alex-site input[type="submit"] {
+	border-radius: 999px;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	text-transform: none;
 }
 
 .alex-site .button.primary,
@@ -91,6 +161,22 @@ body.alex-site {
 .alex-site .button.primary:hover {
 	background-color: var(--alex-blue-dark) !important;
 	box-shadow: inset 0 0 0 2px var(--alex-blue-dark) !important;
+}
+
+.alex-site #main h1,
+.alex-site #main h2,
+.alex-site #main h3,
+.alex-site #footer h2,
+.alex-site #footer h3 {
+	letter-spacing: -0.035em;
+	text-transform: none;
+}
+
+.alex-site #main p,
+.alex-site #main li,
+.alex-site #footer p {
+	font-style: normal !important;
+	line-height: 1.7;
 }
 
 .recruiter-summary {
@@ -120,7 +206,7 @@ body.alex-site {
 .cta-panel,
 .skill-strip {
 	border: 1px solid var(--alex-border);
-	border-radius: 1rem;
+	border-radius: 1.1rem;
 	background: var(--alex-card);
 	box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
@@ -132,11 +218,11 @@ body.alex-site {
 .value-grid strong,
 .snapshot-grid strong {
 	display: block;
-	font-size: 0.95rem;
+	font-size: 0.9rem;
 	color: var(--alex-ink);
 	margin-bottom: 0.45rem;
-	letter-spacing: 0.03em;
-	text-transform: uppercase;
+	letter-spacing: -0.01em;
+	text-transform: none;
 }
 
 .value-grid span,
@@ -159,17 +245,18 @@ body.alex-site {
 
 .metric-number {
 	display: block;
-	font-family: "Merriweather", Georgia, serif;
 	font-size: 2.25rem;
-	font-weight: 900;
+	font-weight: 780;
+	letter-spacing: -0.055em;
 	line-height: 1;
 	color: var(--alex-blue);
 	margin-bottom: 0.7rem;
 }
 
 .metric-grid h3 {
-	font-size: 0.9rem;
+	font-size: 0.95rem;
 	margin-bottom: 0.55rem;
+	font-weight: 760;
 }
 
 .metric-grid p {
@@ -322,7 +409,7 @@ body.alex-site {
 	border-radius: 50%;
 	background: #dbeafe;
 	color: var(--alex-blue);
-	font-weight: 900;
+	font-weight: 800;
 	margin-bottom: 1rem;
 }
 
@@ -373,16 +460,23 @@ body.alex-site {
 
 @media screen and (max-width: 736px) {
 	.alex-site #intro.alex-hero {
-		padding-top: 4.5rem;
+		padding: 4.5rem 1.25rem 3.5rem 1.25rem;
+		min-height: 100vh;
 	}
 
 	.alex-hero h1 {
-		font-size: 2.25rem;
+		font-size: clamp(2.7rem, 14vw, 4rem);
+		letter-spacing: -0.07em;
+	}
+
+	.alex-hero h2 {
+		font-size: clamp(1.65rem, 8vw, 2.35rem);
 	}
 
 	.hero-copy,
 	.hero-subtitle {
-		font-size: 0.95rem;
+		font-size: 0.98rem;
+		line-height: 1.6;
 	}
 
 	.value-grid,
@@ -406,5 +500,10 @@ body.alex-site {
 	.hero-proof,
 	.chips {
 		justify-content: center;
+	}
+
+	.hero-actions li,
+	.hero-actions .button {
+		width: 100%;
 	}
 }
